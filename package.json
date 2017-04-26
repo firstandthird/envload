@@ -1,0 +1,30 @@
+{
+  "name": "envload",
+  "description": "turn env vars into an object",
+  "version": "0.0.1",
+  "homepage": "https://github.com/firstandthird/envload",
+  "author": "First+Third",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/firstandthird/envload.git"
+  },
+  "dependencies": {
+    "lodash.camelcase": "^4.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-firstandthird": "^3.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "tap": "^10.3.2",
+    "tap-spec": "^4.1.1"
+  },
+  "keywords": [
+    "config",
+    "settings",
+    "env"
+  ],
+  "scripts": {
+    "test": "tap test | tap-spec",
+    "lint": "eslint ."
+  }
+}
