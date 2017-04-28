@@ -5,12 +5,14 @@ const envload = require('../index.js');
 tap.test('can turn an env into a set of properties', (t) => {
   const env = envload('prefix', {
     PREFIX_TEST: 1,
-    PREFIX_FULL_NAME__FIRST: 'bob'
+    PREFIX_FULL_NAME__FIRST: 'bob',
+    PREFIX_FULL_NAME__LAST: 'smith'
   });
   t.deepEqual(env, {
     test: 1,
     fullName: {
-      first: 'bob'
+      first: 'bob',
+      last: 'smith'
     }
   });
   t.end();
