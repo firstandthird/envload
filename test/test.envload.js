@@ -8,6 +8,7 @@ tap.test('can turn an env into a set of properties', (t) => {
     PREFIX_FULL_NAME__FIRST: 'bob',
     PREFIX_FULL_NAME__LAST: 'smith'
   });
+  console.log(env)
   t.deepEqual(env, {
     test: 1,
     fullName: {
