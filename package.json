@@ -1,7 +1,7 @@
 {
   "name": "envload",
   "description": "turn env vars into an object",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/firstandthird/envload",
   "author": "First+Third",
   "repository": {
