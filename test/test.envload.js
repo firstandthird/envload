@@ -8,7 +8,22 @@ tap.test('can turn an env into a set of properties', (t) => {
     PREFIX_FULL_NAME__FIRST: 'bob',
     PREFIX_FULL_NAME__LAST: 'smith'
   });
-  console.log(env)
+  t.deepEqual(env, {
+    test: 1,
+    fullName: {
+      first: 'bob',
+      last: 'smith'
+    }
+  });
+  t.end();
+});
+
+
+tap.test('by default will use process.env', (t) => {
+  process.env.PREFIX_TEST = 1;
+  process.env.PREFIX_FULL_NAME__FIRST = 'bob';
+  process.env.PREFIX_FULL_NAME__LAST = 'smith';
+  const env = envload('prefix');
   t.deepEqual(env, {
     test: 1,
     fullName: {
